@@ -1,0 +1,9 @@
+fastapi==0.115.13
+langchain==0.3.25
+langchain_chroma==0.2.4
+langchain_core==0.3.65
+langchain_ollama==0.3.3
+langchain_text_splitters==0.3.8
+pydantic==2.11.7
+python-dotenv==1.1.0
+unstructured==0.17.2
