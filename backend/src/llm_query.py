@@ -34,7 +34,7 @@ def get_prompt():
 def query(input):
     if input:
         # Initialize the language model with the specified model name
-        llm = ChatOllama(model=config.OLLAMA_MODEL,think=False)
+        llm = ChatOllama(model=config.OLLAMA_MODEL, extract_reasoning=False)
         # Get the vector database instance
         db = get_vector_db()
         # Get the prompt templates
