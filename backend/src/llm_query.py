@@ -13,7 +13,7 @@ config= Config()
 def get_prompt():
     QUERY_PROMPT = PromptTemplate(
         input_variables=["question"],
-        template="""/nothink You are an assistant to an LLM called Sage Copilot. Your task is to generate as many (max of 5)
+        template="""You are an assistant to an LLM called Sage Copilot. Your task is to generate as many (max of 5)
         different versions of the given user question to retrieve relevant documents from
         a vector database. By generating multiple perspectives on the user question, your
         goal is to help the user overcome some of the limitations of the distance-based
@@ -21,7 +21,7 @@ def get_prompt():
         Original question: {question}""",
     )
 
-    template = """Answer the question based ONLY on the following context:
+    template = """Answer the question basedChatOllama ONLY on the following context:
     {context}
     Question: {question}
     """
@@ -34,7 +34,7 @@ def get_prompt():
 def query(input):
     if input:
         # Initialize the language model with the specified model name
-        llm = ChatOllama(model=config.OLLAMA_MODEL)
+        llm = ChatOllama(model=config.OLLAMA_MODEL,think=False)
         # Get the vector database instance
         db = get_vector_db()
         # Get the prompt templates
