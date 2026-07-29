@@ -3,6 +3,9 @@
 A lightweight, self-hosted RAG (Retrieval-Augmented Generation) system for personal document Q&A. Runs entirely on local hardware — designed for home servers and edge devices.
 
 ---
+## Journey to Build This
+I've documented a large portion of building this (here)[https://adeayo.dev/programmers_trap/]
+---
 
 ## What It Does
 
